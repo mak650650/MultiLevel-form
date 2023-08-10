@@ -16,7 +16,7 @@ export const UTIL ={
                 const phone_no = parseInt(phone_number);
                 const step1_data = [name,email_address,phone_no];
                 
-                    if (name === '' ||  email_address === '' || phone_number === ''){
+                    if (name === '' ||  email_address === '' || phone_number === '' || phone_number !== ''){
                         if(name === ''){
                             document.getElementById("warningOne").style.visibility = `visible`;
                             document.getElementById("warningOne").innerText = `can't be empty`;
