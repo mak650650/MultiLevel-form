@@ -16,7 +16,7 @@ export const UTIL ={
                 const phone_no = parseInt(phone_number);
                 const step1_data = [name,email_address,phone_no];
                 
-                    if (name === '' ||  email_address === '' || phone_number === '' || phone_number !== ''){
+                    if (name === '' ||  email_address === '' || phone_number === ''){
                         if(name === ''){
                             document.getElementById("warningOne").style.visibility = `visible`;
                             document.getElementById("warningOne").innerText = `can't be empty`;
@@ -27,13 +27,8 @@ export const UTIL ={
                             document.getElementById("warningTwo").innerText = `can't be empty`;
 
                         }
-                        if(phone_number !== ''){ 
-                            if(isNaN(phone_no)){
-                                document.getElementById("warningThree").style.visibility = `visible`;
-                                document.getElementById("warningThree").innerText = `Please enter number only!`;
-                            }
-                
-                        }else{
+                        
+                        if(phone_number === ''){
                             document.getElementById("warningThree").style.visibility = `visible`;
                             document.getElementById("warningThree").innerText = `${phone_number} can't be empty`;
                         }
@@ -42,9 +37,16 @@ export const UTIL ={
                         
                         // alert("Enter your info");
                     }else{
-                        if(parseInt(phone_number) !== NaN){
-                            box.innerHTML = `Name :-${name} \n  Email Address :-${email_address} \n Phone Number :-${phone_no}`;
+                        if(phone_number !== ''){ 
+                            if(isNaN(phone_no)){
+                                document.getElementById("warningThree").style.visibility = `visible`;
+                                document.getElementById("warningThree").innerText = `Please enter number only!`;
+                            }else{
+                                box.innerHTML = `Name :-${name} \n  Email Address :-${email_address} \n Phone Number :-${phone_no}`;
+                            }
                         }
+                        
+                        
                     }
                     
                 resolve(step1_data);
