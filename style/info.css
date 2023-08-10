@@ -1,0 +1,80 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#form_one {
+  display: flex;
+  flex-direction: column;
+}
+#form_one .inputClass {
+  height: 100%;
+}
+#form_one input {
+  width: 90%;
+  border-radius: 10px;
+  margin: 0px 10px 50px 0px;
+  padding: 15px;
+  color: black;
+  font-weight: bold;
+}
+#form_one .class1::before {
+  content: "Name";
+  display: block;
+  color: rgb(232, 232, 232);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#form_one .class2::before {
+  content: "Email Address";
+  display: block;
+  color: rgb(232, 232, 232);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#form_one .class3::before {
+  content: "Phone Number";
+  display: block;
+  color: rgb(232, 232, 232);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#form_one .submitContainer_one {
+  width: 90%;
+  margin: 20px 10px 0px 0px;
+  display: flex;
+  justify-content: end;
+}
+#form_one .submitContainer_one .next_one {
+  width: 1500px;
+  font-size: clamp(0.4rem, 12vw + 2px, 0.89rem);
+  font-weight: bold;
+  background-color: rgba(193, 191, 255, 0.759);
+  color: rgb(33, 60, 88);
+  border: 2px rgb(33, 60, 88);
+  border-radius: 10px;
+  width: 10%;
+  padding: 15px 10px 15px 10px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+#form_one .submitContainer_one .next_one:hover {
+  background-color: rgb(193, 191, 255);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+  font-size: clamp(0.4rem, 12vw + 2px, 5rem);
+  margin: 0px 0px 0px 30px;
+  font-weight: bolder;
+  color: rgb(193, 191, 255);
+}
+
+h6 {
+  font-size: clamp(0.4rem, 12vw + 2px, 1.5rem);
+  color: rgb(193, 193, 193);
+  font-weight: lighter;
+  margin-bottom: 20px;
+  margin: 0px 0px 30px 30px;
+}/*# sourceMappingURL=info.css.map */

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/info.css">
+</head>
+<body>
+    <div id="container">
+        <div id="tile-element"></div>
+        <div id="container-element">
+            <form class="form-1">
+                <!-- <input type="file" name="upload"  id="upload" /> -->
+                <div class="box">
+                    <div id="innerBox_one">
+                        <h2>Personal info</h2>
+                        <h6>Please enter your name,email address and phone number</p>
+                        <br/>
+                        <div id="form_one" style="visibility: visible;">
+                            <form>
+                                <div class="inputClass class1">
+                                    <input type="text" name="name" class="name" placeholder="Enter your name" required autocomplete="off"/>
+                                    <p id="warningOne" style="visibility: hidden;">ok</p>
+                                    
+                                </div>
+                                <div class="inputClass class2">
+                                    <input type="text" name="emailAdress" class="email" placeholder="Enter your email address" required autocomplete="off"/>
+                                    <p id="warningTwo" style="visibility: hidden;">ok</p>
+
+                                </div>
+                                <div class="inputClass class3">
+                                    <input type="text" name="phoneNumber" class="number" placeholder="Enter your phone number" required autocomplete="off"/>
+                                    <p id="warningThree" style="visibility: hidden;">ok</p>
+                                </div>
+                                <div class="submitContainer_one">
+                                    <button type="submit" name="submit" class="next_one">Next step</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
+                    <div id="innerBox_two" style="visibility: hidden;"></div>   
+                    <div id="innerBox_three" style="visibility: hidden;"></div>   
+                    <div id="innerBox_four" style="visibility: hidden;"></div>   
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="server.js" type="module"></script>
+</body>
+</html>
