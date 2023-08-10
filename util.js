@@ -5,21 +5,46 @@ export const UTIL ={
         return new Promise(function(resolve,reject) {
             next_one.addEventListener('click',function(event){
                 event.preventDefault();
+
+                document.getElementById("warningOne").style.visibility = `hidden`;
+                document.getElementById("warningTwo").style.visibility = `hidden`;
+                document.getElementById("warningThree").style.visibility = `hidden`;
+
                 const name = document.getElementsByClassName("class1")[0].children[0].value;
                 const email_address = document.getElementsByClassName("class2")[0].children[0].value;
-                const phone_number = parseInt(document.getElementsByClassName("class3")[0].children[0].value);
-                const step1_data = [name,email_address,phone_number];
+                const phone_number = document.getElementsByClassName("class3")[0].children[0].value;
+                const phone_no = parseInt(phone_number);
+                const step1_data = [name,email_address,phone_no];
                 
-                    if (name === '' ||  email_address === '' || phone_number === NaN){
-                        if(email_address === ''){
-                            document.getElementById("warningTwo").style.visibility = `visible`;
-                        }
+                    if (name === '' ||  email_address === '' || phone_number === ''){
                         if(name === ''){
                             document.getElementById("warningOne").style.visibility = `visible`;
+                            document.getElementById("warningOne").innerText = `can't be empty`;
+
                         }
+                        if(email_address === ''){
+                            document.getElementById("warningTwo").style.visibility = `visible`;
+                            document.getElementById("warningTwo").innerText = `can't be empty`;
+
+                        }
+                        if(phone_number !== ''){ 
+                            if(isNaN(phone_no)){
+                                document.getElementById("warningThree").style.visibility = `visible`;
+                                document.getElementById("warningThree").innerText = `Please enter number only!`;
+                            }
+                
+                        }else{
+                            document.getElementById("warningThree").style.visibility = `visible`;
+                            document.getElementById("warningThree").innerText = `${phone_number} can't be empty`;
+                        }
+                        
+                        
+                        
                         // alert("Enter your info");
                     }else{
-                        box.innerHTML = `Name :-${name} \n  Email Address :-${email_address} \n Phone Number :-${phone_number}`;
+                        if(parseInt(phone_number) !== NaN){
+                            box.innerHTML = `Name :-${name} \n  Email Address :-${email_address} \n Phone Number :-${phone_no}`;
+                        }
                     }
                     
                 resolve(step1_data);

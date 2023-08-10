@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+$font:monospace;
+
 #form_one{
     display: flex;
     flex-direction: column;
@@ -20,6 +22,7 @@
         font-weight: bold;
         
     }
+
    
     .class1::before{
         content: 'Name';
@@ -27,6 +30,7 @@
         color :rgb(232, 232, 232);
         margin-bottom: 5px;
         font-weight: bold;
+
     }
     .class2::before{
         content: 'Email Address';
@@ -42,6 +46,28 @@
         color :rgb(232, 232, 232);
         margin-bottom: 5px;
         font-weight: bold;
+    }
+    #warningOne{
+        margin: -50px 0px 50px 5px;
+        color: rgb(255, 152, 152);
+        font-family: $font;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    #warningTwo{
+        margin: -50px 0px 50px 5px;
+        color: rgb(255, 152, 152);
+        font-family: $font;
+        font-weight: bold;
+        font-size: 1.2rem;
+
+    }
+    #warningThree{
+        margin: -50px 0px 50px 5px;
+        color: rgb(255, 152, 152);
+        font-weight: bold;
+        font-size: 1.2rem;
+
     }
 
     .submitContainer_one{

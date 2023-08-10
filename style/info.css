@@ -40,6 +40,26 @@
   margin-bottom: 5px;
   font-weight: bold;
 }
+#form_one #warningOne {
+  margin: -50px 0px 50px 5px;
+  color: rgb(255, 152, 152);
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#form_one #warningTwo {
+  margin: -50px 0px 50px 5px;
+  color: rgb(255, 152, 152);
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#form_one #warningThree {
+  margin: -50px 0px 50px 5px;
+  color: rgb(255, 152, 152);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 #form_one .submitContainer_one {
   width: 90%;
   margin: 20px 10px 0px 0px;
